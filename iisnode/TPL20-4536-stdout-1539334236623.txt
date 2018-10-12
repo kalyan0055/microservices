@@ -1,0 +1,5 @@
+\\.\pipe\dca156bf-c418-449f-9807-b8063002a245
+ is it comign
+{"kind":"notice","notice":"hello seneca z5hhm78ilwf5/1539334237594/4536/3.7.0/-","level":"info","seneca":"z5hhm78ilwf5/1539334237594/4536/3.7.0/-","when":1539334237878}
+mongodb not connected
+mongo Connected Promise { <pending> }

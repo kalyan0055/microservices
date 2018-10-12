@@ -1,0 +1,4 @@
+\\.\pipe\9650c13a-eaea-416c-aaeb-95305b199ee1
+ is it comign
+{"kind":"notice","notice":"hello seneca npafr7su82yv/1539334044840/14596/3.7.0/-","level":"info","seneca":"npafr7su82yv/1539334044840/14596/3.7.0/-","when":1539334045199}
+mongo Connected Promise { <pending> }
