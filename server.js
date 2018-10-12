@@ -20,6 +20,7 @@ glob.sync( './usermodel.js' ).forEach( function( file ) {
   require( path.resolve( file ));
  });
 app.use(context);
+var deployPath = process.env.deployPath || "";
 
 var db = mongoose.connect("mongodb://127.0.0.1:27017/swagger-demo",function(err){
   if(err){
@@ -38,7 +39,7 @@ const senecaWebConfig = {
 
 
 app.get('/health', (req, res) => {
-	res.json({ success: true });
+	res.send({ success: true });
 });
 
  
@@ -46,27 +47,31 @@ const seneca = require('seneca')()
 			.use(SenecaWeb, senecaWebConfig)
       .use('api')
       .use('users')
-      .client({ type: 'tcp', pin: 'role:sample', port: 10205,host:'127.0.0.1' })
       .client({ type: 'tcp', pin: 'role:users', port: 10206,host:'127.0.0.1' });
+      // .client({ type: 'tcp', pin: 'role:samplse', port: 10205,host:'sfsd.0.0.1' })
+      
 	
  
 const act = Promise.promisifyAll(seneca.act, { context: seneca });
 
 app.get('/', (req, res) => {
-	res.send('index page');
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+   
+  res.send('index page');
+  res.end('Hello, world! [helloworld sample]');
 });
  
 
  
-http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Hello, world! [helloworld sample]');
-}).listen(process.env.PORT);
-// const server = require('http').createServer(app);
-// var port = process.env.port;  
-// console.log(port);
+// http.createServer(function (req, res) {
+//     res.writeHead(200, {'Content-Type': 'text/plain'});
+//     res.end('Hello, world! [helloworld sample]');
+// }).listen(process.env.PORT);
+const server = require('http').createServer(app);
+let port = process.env.PORT;  
+console.log(port);
 
-// server.listen(process.env.PORT);
+server.listen(process.env.PORT);
 // app.listen(process.env.PORT);
 // "use strict";
 

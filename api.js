@@ -25,12 +25,16 @@ function api(options) {
 	// 	});
 	// }
 
-	function test(arg, done){
+	function test(msg, done){
+		console.log('functi');
+		
 		dbUsers.find({},function(err,data){
 			if(err){
 				done({err:err})
 			}else{
-				done(null,{users:data})
+			  return done({'tests':data})
+				// res.writeHead(200, {'Content-Type': 'text/plain'});
+    
 			}
 		})
 		// done(null, {foo: 'bar'});

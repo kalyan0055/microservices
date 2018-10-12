@@ -1,0 +1,6 @@
+\\.\pipe\02181743-0782-4a2c-a3f8-0dda2bd7a501
+mongo Connected Promise { <pending> }
+ is it comign
+{"kind":"notice","notice":"hello seneca s8pd60u8sxd4/1539351631249/14872/3.7.0/-","level":"info","seneca":"s8pd60u8sxd4/1539351631249/14872/3.7.0/-","when":1539351631682}
+functi
+functi

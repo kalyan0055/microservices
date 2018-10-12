@@ -1,3 +1,0 @@
-mongo Connected Promise { <pending> }
- is it comign
-{"kind":"notice","notice":"hello seneca tn1n171fp7h8/1539336224886/14352/3.7.0/-","level":"info","seneca":"tn1n171fp7h8/1539336224886/14352/3.7.0/-","when":1539336225161}
